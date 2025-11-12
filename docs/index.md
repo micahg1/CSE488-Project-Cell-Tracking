@@ -1,36 +1,39 @@
-# TEAM_NAME – Cell Segmentation & Tracking Showcase
+# Team Siam – Cell Segmentation & Tracking Showcase
 
-[![GitHub Repo](https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white)](https://github.com/jfemiani/CSE488-Project-Cell-Tracking)
+[![GitHub Repo](https://img.shields.io/badge/GitHub-Code-181717?logo=github&logoColor=white)](https://github.com/AshfakSiam/CSE488-Project-Cell-Tracking)
 
-> Replace `TEAM_NAME`, update the badge link to your fork, and embed your own visuals. This page is what you submit as the public-facing deliverable.
+> This page presents our progress and results for the CSE 488 Cell Segmentation & Tracking project.
 
 ## Project Overview
 
-- **Dataset(s):** E.g., Fluo-N2DH-GOWT1 (tracks 01 & 02)
-- **Team roles:** segmentation lead, tracking lead, evaluation lead
-- **Summary:** Briefly explain your approach and what makes it unique.
+- **Dataset(s):** Fluo-N2DH-GOWT1 (tracks 01 & 02)
+- **Team roles:**  
+  - K M Ashfak Alam Siam – Segmentation Lead  
+  - Micah Granadino – Tracking Lead  
+  - Sudhir Yadav – Evaluation / Integration
+- **Summary:**  
+  Our project implements and evaluates both classical and deep-learning approaches for cell segmentation and tracking in microscopy videos. We focus on improving segmentation accuracy while keeping the pipeline lightweight and reproducible.
 
 ## Segmentation Results
 
 | Method | Dataset | Track | Mean IoU | Notes |
-| ------ | ------- | ----- | -------- | ----- |
-| Classical SVM | Fluo-N2DH-GOWT1 | 01 | 0.73 | RBF kernel, window=5 |
-| CNN Baseline | Fluo-N2DH-GOWT1 | 02 | 0.81 | Lightweight U-Net |
+| ------- | -------- | ------ | -------- | ----- |
+| Classical SVM | Fluo-N2DH-GOWT1 | 01 | 0.73 | RBF kernel, window = 5 |
+| CNN Baseline (U-Net) | Fluo-N2DH-GOWT1 | 02 | 0.81 | Lightweight U-Net architecture |
 
-- Describe preprocessing, feature engineering, and model choices.
-- Link to notebooks or scripts that reproduce each row.
+We compare traditional feature-based segmentation with CNN-based models and document preprocessing, feature extraction, and hyperparameters in the associated notebooks.
 
 ## Tracking Results (Grad/Honors)
 
 | Tracker | Metric | Score | Notes |
-| ------- | ------ | ----- | ----- |
-| ASM + IoU linking | ID switches | 4 | Initialized from previous frame |
+| -------- | ------- | ------ | ----- |
+| ASM + IoU Linking | ID Switches | 4 | Initialized from previous frame |
 
-Explain how you propagate identities across frames and highlight failure cases.
+We link segmented cells across frames using IoU-based matching and analyze failure cases when objects overlap or split.
 
 ## Demo Videos / GIFs
 
-Embed MP4/GIF assets committed under `docs/assets/` or hosted elsewhere.
+Embed any media under `docs/assets/`. Example:
 
 ```html
 <video controls width="640">
@@ -49,4 +52,4 @@ Embed MP4/GIF assets committed under `docs/assets/` or hosted elsewhere.
 
 ## Lessons Learned / Next Steps
 
-Share insights, what you'd try next, and open research questions.
+We learned how critical preprocessing is for accurate tracking and plan to explore transformer-based segmentation and self-supervised pre-training in the next iteration.
