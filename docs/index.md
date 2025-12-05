@@ -11,7 +11,7 @@
   - K M Ashfak Alam Siam – Segmentation Lead  
   - Micah Granadino – Tracking Lead  
   - Sudhir Yadav – Evaluation / Integration
-- **Summary:**  
+- **Goal:**  
   Our project implements and evaluates both classical and deep-learning approaches for cell segmentation and tracking in microscopy videos. We focus on improving segmentation accuracy while keeping the pipeline lightweight and reproducible.
 
 ## Segmentation Results
