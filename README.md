@@ -88,6 +88,8 @@ Each team must host a lightweight public page that summarizes results and embeds
 6. Update the README badge/link to point at the Cloudflare URL and include that URL in your Canvas submission. For a custom hostname, add it under **Pages → Custom domains** and create the suggested CNAME in Cloudflare DNS.
 7. **Fallback option:** If Cloudflare Pages is unavailable, share the rendered `docs/index.md` directly by linking to the file in your private repo (grant graders read access) and ensure the README clearly states that temporary arrangement.
 
+**For our Project, we rendered `docs/index.md` with read access. We will not be showcasing the Cloudflare Page.**
+
 ## License
 
 MIT License – adjust to match your team preference if needed.
