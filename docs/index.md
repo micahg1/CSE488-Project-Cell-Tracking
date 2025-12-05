@@ -1,3 +1,22 @@
+# Team Siam – Cell Segmentation & Tracking Showcase
+
+> CSE 488 / 588 – Cell Segmentation & Tracking  
+> Dataset: **Fluo-N2DH-GOWT1 (Tracks 01 & 02)**
+
+---
+
+## Project Overview
+
+We implement and compare **classical machine learning** and **deep learning** approaches for cell segmentation, followed by tracking using IoU-based matching.
+
+### Team Roles
+
+| Member | Role |
+|---|---|
+| **K M Ashfak Alam Siam** | Segmentation Lead |
+| **Micah Granadino** | Tracking Lead |
+| **Sudhir Yadav** | Evaluation & Integration |
+
 # Rigorous Comparison of Learned vs. Classical Methods for Cell Segmentation
 
 ## Introduction
