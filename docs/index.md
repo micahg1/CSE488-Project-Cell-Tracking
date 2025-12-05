@@ -44,27 +44,4 @@ We evaluate models using **Mean Jaccard Index (IoU)**.
 
 ---
 
-## Tracking Results
 
-We track segmented cells across frames using **IoU matching**.
-
-| Tracker | Metric | Score | Notes |
-|---|:---:|:---:|---|
-| **ASM + IoU Linking** | **ID Switches = 4** | Reliable when cells are not merging |
-
-Failure modes:
-- Overlaps
-- Mitosis / splitting
-- Missing masks from segmentation
-
----
-
-## Visual Examples
-
-Embed videos under `docs/assets/`.
-
-```html
-<video controls width="640">
-  <source src="assets/segmentation_demo.mp4" type="video/mp4" />
-  Your browser does not support the video tag.
-</video>
