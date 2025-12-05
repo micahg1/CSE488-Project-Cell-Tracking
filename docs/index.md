@@ -35,7 +35,6 @@ All classical models operate on **local pixel windows** instead of whole images:
 - Sliding **5×5 patches**
 - Flattened into **25-dimensional feature vectors**
 - Foreground/background labels from ground-truth masks
-- Class imbalance handled via weighted samples
 
 The training matrix contains **18,400 samples × 25 features**.
 
@@ -45,9 +44,6 @@ Algorithms evaluated:
 - **Logistic Regression**
 - **SVM (linear and RBF kernels)**
 - **Multi-Layer Perceptron (patch-based Net v1)**
-
-A fundamental limitation:  
-> These methods are **not spatially aware** — each pixel is classified independently without structure or shape context.
 
 ### Qualitative Failures
 
@@ -73,7 +69,7 @@ Using the official `MySEGMeasure.py` evaluator:
 
 These scores are **near-random** on Track 02 and substantially below the **baseline challenge software (≈0.23)**.
 
-> **Conclusion: Classical models cannot reliably segment cells**, even with thousands of samples and tuning.
+**Conclusion: Classical models cannot reliably segment cells**, even with thousands of samples and tuning.
 
 ---
 
@@ -160,27 +156,6 @@ The MLP starts from scratch with **no prior knowledge**.
 
 ---
 
-## Discussion
-
-Deep learning is **fundamentally better** for semantic cell segmentation:
-
-- Handles full-image context
-- Learns hierarchical features
-- Produces coherent object masks
-
-However:
-
-- **Track 02 remains difficult**
-- Likely due to lower contrast, imaging differences, or focus variation
-
-Future improvements:
-
-- Data augmentation
-- Boundary refinement
-- U-Net or transformer architectures
-
----
-
 ## Conclusion
 
 This study provides a **rigorous, empirical comparison**:
@@ -188,8 +163,8 @@ This study provides a **rigorous, empirical comparison**:
 - Classical models, including patch-MLP, achieve **very low IoU** (≈0.003–0.05)
 - Fine-tuned **FCN-ResNet101** achieves **≈0.48 IoU on Track 01**
 
-> **Deep learning clearly outperforms classical pixel-based classifiers for cell segmentation.**
+**Deep learning clearly outperforms classical pixel-based classifiers for cell segmentation.**
 
-Even without extensive tuning, full-image context and learned features make the CNN far superior. Classical approaches lack spatial awareness and cannot recover meaningful structure, while the FCN produces accurate, biologically plausible masks.
+
 
 ---
