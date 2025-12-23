@@ -1,4 +1,4 @@
-# Team Siam – Cell Segmentation & Tracking Showcase
+# Team Siam, Granadino, Yadav – Cell Segmentation & Tracking Showcase
 
 CSE 488 / 588 – Cell Segmentation & Tracking  
 Dataset: **Fluo-N2DH-GOWT1 (Tracks 01 & 02)**
